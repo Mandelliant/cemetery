@@ -1,0 +1,370 @@
+.full-page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  } */
+
+/* Logo styling */
+.logo {
+  position: absolute;
+  top: 35px;
+  left: 53px;
+  width: 100px;
+  /* Adjust as needed */
+  height: auto;
+}
+
+/* Icon box styling */
+.icon-box {
+  position: absolute;
+  bottom: 70px;
+  left: 53px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Icon styling */
+.icon-box img {
+  width: 50px;
+  height: auto;
+  /* Keep SVG ratio */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for icons */
+.icon-box img:hover {
+  transform: scale(1.1);
+}
+
+/* Right-bottom component styling */
+.right-bottom-component {
+  position: absolute;
+  bottom: 70px;
+  right: 53px;
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+/* Link styling */
+.learn-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.learn-link img {
+  width: 30px;
+  height: auto;
+}
+
+/* Music toggle styling */
+.music-toggle img {
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.music-toggle img:hover {
+  transform: scale(1.1);
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Custom modal styling */
+.custom-modal .modal-dialog {
+  animation: zoomIn 0.5s ease;
+  max-width: calc(1079 * 100vw/2912);
+  /* Set modal width */
+}
+
+/* Custom modal styling */
+.area-modal .modal-dialog {
+  max-width: calc(1079 * 100vw/2912);
+  /* Set modal width */
+}
+
+@media (max-width: 1076px) {
+  .custom-modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+  
+
+/* Custom modal styling */
+.custom-modal .modal-content {
+  background-image: url('../images/modal-bg.png');
+  /* Replace with your modal background image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'Acme', Courier, monospace;
+  background-position: center;
+  background-color: transparent;
+  color: #d3d3d3;
+  border-radius: 10px;
+  padding: calc(66 * 100vw/2912);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  border: 0;
+  height: auto;
+  aspect-ratio: 1079 / 590;
+  /* Ensures the modal maintains its aspect ratio */
+}
+
+.custom-modal .modal-body {
+  padding: 0;
+}
+
+.custom-modal p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: calc(27 * 100vw/2912);
+  font-size: calc(36.78px * 100vw/2912);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.custom-modal .modal-footer .enter-button {
+  background-image: url('../images/enterCemetry.png');
+  /* Replace with your button background image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: calc(484 * 100vw/2912);
+  height: calc(87 * 100vw/2912);
+  /* Maintain aspect ratio */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: transform 0.2s;
+  font-family: 'Acme', Courier, monospace;
+  font-size: calc(40 * 100vw/2912);
+  line-height: calc(50.64 * 100vw/2912);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.custom-modal .modal-footer .enter-button:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay for modal */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+  /* Dark overlay */
+}
+
+.custom-modal .modal-footer {
+  border: 0;
+  justify-content: center;
+  padding: 0;
+}
+
+.area-modal .modal-footer {
+  border: 0;
+  justify-content: center;
+  padding: 0;
+}
+
+
+/* Glow effect styling */
+.glow-effect {
+  position: absolute;
+  background-size: 100% 100%;
+  /* Ensure the background image covers the area */
+  background-position: center;
+  /* box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.5); */
+  pointer-events: none;
+  /* So it doesn't interfere with clicks */
+  z-index: 10;
+  /* Display it on top */
+  opacity: 0;
+  /* Hidden by default */
+  /* transition: opacity 0.3s ease; */
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white);
+}
+
+.area1 {
+  margin-left: -13px;
+  background-size: 82% 96%;
+  margin-top: -3px;
+}
+
+.area4 {
+  margin-left: 0px;
+  margin-top: -13px;
+  background-size: 68% 87%;
+}
+
+.area5 {
+  background-size: 80% 80%;
+}
+
+/* Custom modal styling */
+.area-modal .modal-content {
+  background-image: url('../images/modal-area1.png');
+  /* Replace with your modal background image */
+  background-size: cover;
+  font-family: 'Acme', Courier, monospace;
+  background-position: center;
+  background-color: transparent;
+  color: #d3d3d3;
+  border-radius: 10px;
+  padding: 66px;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  border: 0;
+  height: auto;
+  aspect-ratio: 1079 / 1112;
+  filter: drop-shadow(0 0 20px white) drop-shadow(0 0 30px white);
+  /* Ensures the modal maintains its aspect ratio */
+}
+
+.area-modal p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 27px;
+  line-height: 36.78px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.area-modal .modal-footer .enter-button {
+  background-image: url('../images/closeAreaModal.png');
+  /* Replace with your button background image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: calc(500 * 100vw/2912);
+  height: calc(125 * 100vw/2912);
+  /* Maintain aspect ratio */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: transform 0.2s;
+  font-size: calc(32 * 100vw/2912);
+  line-height: calc(38.4 * 100vw/2912);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: rgb(253, 236, 228);
+  font-style: italic;
+  padding: 20px;
+}
+
+.area-modal .modal-footer .enter-button:hover {
+  transform: scale(1.05);
+}
+
+.area-modal .modal-dialog {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: flex-start;
+  top: 117px;
+  right: calc(537 * 100vw/2912);
+}
+
+.area-modal .modal-body .header {
+  text-align: center;
+}
+
+.area-modal .modal-body .header .title {
+  font-family: 'Acme', Courier, monospace;
+  font-size: calc(48 * 100vw/2912);
+  font-weight: 400;
+  line-height: calc(65.39 * 100vw/2912);
+  letter-spacing: 0.03em;
+  color: rgba(188, 205, 219);
+}
+
+.area-modal .modal-body .header .description {
+  font-family: 'Acme', Courier, monospace;
+  font-size: calc(25 * 100vw/2912);
+  font-weight: 400;
+  line-height: calc(34.06 * 100vw/2912);
+  letter-spacing: 0.03em;
+  color: rgba(188, 205, 219);
+}
+
+.area-modal .modal-body .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(188, 205, 219);
+  margin-bottom: 10px;
+}
+
+.area-modal .modal-body .content p {
+  font-family: 'Pulp Display', Courier, monospace;
+  font-weight: 400;
+  font-size: calc(20 * 100vw/2912);
+  line-height: calc(27.25 * 100vw/2912);
+  letter-spacing: 0.03em;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.area-modal .modal-body .main-content p {
+  font-weight: 400;
+  font-size: calc(25 * 100vw/2912);
+  line-height: calc(34.06 * 100vw/2912);
+  letter-spacing: 0.03em;
+  color: rgba(188, 205, 219);
+}
+
+.area-modal .modal-body .main-content p:first-of-type {
+  font-family: 'Pulp Display', Courier, monospace;
+}
+
+.area-modal .modal-body .main-content p:last-of-type {
+  font-family: 'Acme', Courier, monospace;
+}
+
+.area-modal.modal-area3 .modal-dialog,
+.area-modal.modal-area4 .modal-dialog,
+.area-modal.modal-area5 .modal-dialog
+{
+  top: calc(264 * 100vw/2912);
+  left: calc(485 * 100vw/2912);
+  right: 0;
+}

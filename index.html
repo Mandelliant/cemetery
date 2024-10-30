@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Page Image Website</title>
+  <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
+  <link href = "./assets/fonts/PulpDisplay/stylesheet.css" rel = "stylesheet" type = "text/css" />
+  <style>
+    /* Full-page image background */
+  </style>
+</head>
+
+<body>
+
+  <!-- Full-page image section -->
+  <!-- <div class="full-page-image" > -->
+  <!-- <div class="overlay">
+    </div> -->
+
+  <img src="./assets/images/background-full.png" alt="Background Image" class="full-page-background"
+    usemap="#image-map"> <!-- Replace with your image URL -->
+
+  <!-- Glow effect div (hidden initially) -->
+  <div class="glow-effect" id="glowEffect"></div>
+
+  <map name="image-map" id="image-map">
+    <area alt="area1" title="area1" data-bg-image="./assets/images/area1-hover.png" data-bg-class="area1"
+      data-modal-id="modal-area1"
+      coords="583,282,566,284,552,289,537,298,525,309,515,320,507,335,500,350,503,656,652,656,685,651,683,347,664,328,646,311,622,292,602,284"
+      shape="poly">
+    <area alt="area2" title="area2" data-bg-image="./assets/images/area2-hover.png" data-bg-class="area2"
+      data-modal-id="modal-area2"
+      coords="775,470,759,475,747,487,736,501,730,514,730,530,729,545,730,560,737,677,820,677,832,670,829,519,819,494,798,470"
+      shape="poly">
+    <area alt="area3" title="area3" data-bg-image="./assets/images/area3-hover.png" data-bg-class="area3"
+      data-modal-id="modal-area3"
+      coords="1190,493,1175,496,1161,503,1149,510,1144,523,1139,646,1219,649,1229,520,1222,508,1207,496" shape="poly">
+    <area alt="area4" title="area4" data-bg-image="./assets/images/area4-hover.png" data-bg-class="area4"
+      data-modal-id="modal-area4"
+      coords="1351,490,1334,497,1316,504,1300,521,1287,535,1290,849,1431,842,1429,538,1406,518,1382,497,1368,485"
+      shape="poly">
+    <area alt="area5" title="area5" data-bg-image="./assets/images/area5-hover.png" data-bg-class="area5"
+      data-modal-id="modal-area5"
+      coords="1636,736,1648,726,1663,714,1677,719,1696,724,1707,733,1723,743,1735,767,1738,750,1729,777,1724,794,1726,814,1729,840,1731,851,1733,872,1733,882,1714,882,1692,887,1672,885,1650,885,1631,887,1616,885,1618,868,1618,846,1619,831,1621,814,1619,797,1616,787,1616,777,1606,763,1604,751"
+      shape="poly">
+  </map>
+
+  <a href="/" class="logo">
+    <img src="./assets/images/logo.svg" alt="Logo" class="logo-img"> <!-- Replace with your logo URL -->
+  </a>
+
+  <!-- Icon Box -->
+  <div class="icon-box">
+    <!-- Telegram Icon -->
+    <a href="https://telegram.org" target="_blank">
+      <img src="./assets/images/telegram.svg" alt="Telegram"> <!-- Replace with your Telegram SVG -->
+    </a>
+    <!-- Twitter Icon -->
+    <a href="https://twitter.com" target="_blank">
+      <img src="./assets/images/twitter.svg" alt="Twitter"> <!-- Replace with your Twitter SVG -->
+    </a>
+    <!-- Discord Icon -->
+    <a href="https://discord.com" target="_blank">
+      <img src="./assets/images/discord.svg" alt="Discord"> <!-- Replace with your Discord SVG -->
+    </a>
+  </div>
+
+  <!-- Right-bottom component -->
+  <div class="right-bottom-component">
+    <!-- Learn Link -->
+    <a href="https://example.com" target="_blank" class="learn-link"> <!-- Replace with your desired link -->
+      <img src="./assets/images/learn-icon.svg" alt="Learn Icon"> <!-- Replace with your Learn icon SVG -->
+      <span>Learn about Agorio</span>
+    </a>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle">
+      <img src="./assets/images/voice-icon.svg" alt="Voice Icon" id="musicIcon">
+      <!-- Replace with your voice icon SVG -->
+    </div>
+
+
+  </div>
+  <!-- </div> -->
+
+  <!-- Modal Structure -->
+  <div class="modal fade custom-modal" id="cemeteryModal" data-bs-backdrop="static" tabindex="-1"
+    aria-labelledby="cemeteryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>These are the forgotten relics of blockchain's past—contracts that worked hard but met untimely ends. From
+            staking programs that ran out of time, to liquidity pools that faded away, these contracts lived fast and
+            died young.</p>
+          <p>What if they didn’t have to?</p>
+          <p>Here in the Cemetery, we reflect on what could have been. Explore the tombstones and learn how long life
+            could have saved these once-useful artifacts, allowing them to evolve, adapt, and thrive for blocks to come.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="enter-button">Enter the
+            Cemetery</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade area-modal" id="areaModal" data-bs-backdrop="static" tabindex="-1"
+    aria-labelledby="areaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="header">
+            <h3 class="title">
+              
+            </h3>
+            <p class="description"></p>
+          </div>
+
+          <div class="content">
+          </div>
+
+          <div class="main-content">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="enter-button">See how this death could have been prevented ... </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Element for Music -->
+  <audio id="backgroundMusic" src="./assets/audio/background-image.mp3"></audio>
+  <!-- Replace with your music file URL -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>
