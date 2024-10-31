@@ -77,16 +77,38 @@
   height: auto;
 }
 
-/* Music toggle styling */
-.music-toggle img {
-  width: 40px;
-  height: 26px;
-  cursor: pointer;
-  transition: transform 0.3s;
+.music-toggle {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
 }
 
-.music-toggle img:hover {
-  transform: scale(1.1);
+.music-toggle .music-controller,
+.music-toggle .sound-effect-controller {
+  cursor: pointer;
+}
+
+/* Music toggle styling */
+.music-toggle img {
+  width: 30px;
+  height: 26px;
+}
+
+.music-toggle img#voiceIcon {
+  width: 30px;
+  height: 26px;
+}
+
+.music-toggle img#musicIcon {
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+}
+
+.music-toggle img#soundEffectIcon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
 }
 
 /* Zoom-in animation */
@@ -105,13 +127,13 @@
 /* Custom modal styling */
 .custom-modal .modal-dialog {
   animation: zoomIn 0.5s ease;
-  max-width: calc(1079 * 100vw/2912);
+  max-width: 710px;
   /* Set modal width */
 }
 
 /* Custom modal styling */
 .area-modal .modal-dialog {
-  max-width: calc(1079 * 100vw/2912);
+  max-width: 710px;
   /* Set modal width */
 }
 
@@ -123,7 +145,7 @@
   }
 }
 
-  
+
 
 /* Custom modal styling */
 .custom-modal .modal-content {
@@ -136,7 +158,7 @@
   background-color: transparent;
   color: #d3d3d3;
   border-radius: 10px;
-  padding: calc(66 * 100vw/2912);
+  padding: 35px 43px;
   max-width: 90vw;
   max-height: 90vh;
   width: 100%;
@@ -146,15 +168,34 @@
   /* Ensures the modal maintains its aspect ratio */
 }
 
+.custom-modal .modal-header {
+  border: 0;
+  font-family: 'Acme', Courier, monospace;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0.03em;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .custom-modal .modal-body {
   padding: 0;
+}
+
+.custom-modal .modal-body p {
+  margin-bottom: 0.5rem;
+}
+
+.custom-modal .modal-body p:last-of-type {
+  margin-bottom: 0;
 }
 
 .custom-modal p {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: calc(27 * 100vw/2912);
-  font-size: calc(36.78px * 100vw/2912);
+  font-size: 18px;
   letter-spacing: 0.03em;
   font-weight: 400;
 }
@@ -165,8 +206,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: calc(484 * 100vw/2912);
-  height: calc(87 * 100vw/2912);
+  width: 308px;
+  height: 56px;
   /* Maintain aspect ratio */
   border: none;
   cursor: pointer;
@@ -174,8 +215,8 @@
   text-align: center;
   transition: transform 0.2s;
   font-family: 'Acme', Courier, monospace;
-  font-size: calc(40 * 100vw/2912);
-  line-height: calc(50.64 * 100vw/2912);
+  font-size: 26px;
+  line-height: 33px;
   letter-spacing: 0.03em;
   font-weight: 400;
 }
@@ -216,25 +257,33 @@
   /* Display it on top */
   opacity: 0;
   /* Hidden by default */
-  /* transition: opacity 0.3s ease; */
+  transition: opacity 0.3s ease;
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white);
 }
 
 .area1 {
-  margin-left: -13px;
-  background-size: 82% 96%;
+  margin-left: -12px;
+  background-size: 84% 97%;
+  margin-top: -5px;
+}
+
+.area2 {
+  margin-left: -5px;
+  background-size: 87% 97%;
   margin-top: -3px;
 }
 
 .area4 {
-  margin-left: 0px;
-  margin-top: -13px;
-  background-size: 68% 87%;
+  margin-left: -3px;
+  margin-top: 5px;
+  background-size: 82% 100%;
 }
 
 .area5 {
-  background-size: 80% 80%;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-size: 65% 100%;
 }
 
 /* Custom modal styling */
@@ -247,7 +296,7 @@
   background-color: transparent;
   color: #d3d3d3;
   border-radius: 10px;
-  padding: 66px;
+  padding: 45px;
   max-width: 90vw;
   max-height: 90vh;
   width: 100%;
@@ -270,24 +319,28 @@
 .area-modal .modal-footer .enter-button {
   background-image: url('../images/closeAreaModal.png');
   /* Replace with your button background image */
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: calc(500 * 100vw/2912);
-  height: calc(125 * 100vw/2912);
+  width: 290px;
+  height: 42px;
   /* Maintain aspect ratio */
   border: none;
   cursor: pointer;
   outline: none;
   text-align: center;
   transition: transform 0.2s;
-  font-size: calc(32 * 100vw/2912);
-  line-height: calc(38.4 * 100vw/2912);
+  font-size: 21px;
+  line-height: 25px;
   letter-spacing: 0.03em;
   font-weight: 400;
   color: rgb(253, 236, 228);
   font-style: italic;
   padding: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .area-modal .modal-footer .enter-button:hover {
@@ -310,18 +363,18 @@
 
 .area-modal .modal-body .header .title {
   font-family: 'Acme', Courier, monospace;
-  font-size: calc(48 * 100vw/2912);
+  font-size: 33px;
   font-weight: 400;
-  line-height: calc(65.39 * 100vw/2912);
+  line-height: 43px;
   letter-spacing: 0.03em;
   color: rgba(188, 205, 219);
 }
 
 .area-modal .modal-body .header .description {
   font-family: 'Acme', Courier, monospace;
-  font-size: calc(25 * 100vw/2912);
+  font-size: 18px;
   font-weight: 400;
-  line-height: calc(34.06 * 100vw/2912);
+  line-height: 22.5px;
   letter-spacing: 0.03em;
   color: rgba(188, 205, 219);
 }
@@ -337,8 +390,8 @@
 .area-modal .modal-body .content p {
   font-family: 'Pulp Display', Courier, monospace;
   font-weight: 400;
-  font-size: calc(20 * 100vw/2912);
-  line-height: calc(27.25 * 100vw/2912);
+  font-size: 14px;
+  line-height: 17.5px;
   letter-spacing: 0.03em;
   font-style: italic;
   margin-bottom: 0;
@@ -346,8 +399,8 @@
 
 .area-modal .modal-body .main-content p {
   font-weight: 400;
-  font-size: calc(25 * 100vw/2912);
-  line-height: calc(34.06 * 100vw/2912);
+  font-size: 18px;
+  line-height: 22px;
   letter-spacing: 0.03em;
   color: rgba(188, 205, 219);
 }
@@ -362,9 +415,19 @@
 
 .area-modal.modal-area3 .modal-dialog,
 .area-modal.modal-area4 .modal-dialog,
-.area-modal.modal-area5 .modal-dialog
-{
+.area-modal.modal-area5 .modal-dialog {
   top: calc(264 * 100vw/2912);
   left: calc(485 * 100vw/2912);
   right: 0;
+}
+
+.area-modal .close-btn {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  border: none;
+  z-index: 100;
 }

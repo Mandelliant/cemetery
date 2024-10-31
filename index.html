@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full-Page Image Website</title>
+  <title>Smart Contract Cemetery</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/custom.css">
@@ -56,15 +57,15 @@
   <!-- Icon Box -->
   <div class="icon-box">
     <!-- Telegram Icon -->
-    <a href="https://telegram.org" target="_blank">
+    <a href=" https://agoric.com/telegram" target="_blank">
       <img src="./assets/images/telegram.svg" alt="Telegram"> <!-- Replace with your Telegram SVG -->
     </a>
     <!-- Twitter Icon -->
-    <a href="https://twitter.com" target="_blank">
+    <a href="https://x.com/agoric" target="_blank">
       <img src="./assets/images/twitter.svg" alt="Twitter"> <!-- Replace with your Twitter SVG -->
     </a>
     <!-- Discord Icon -->
-    <a href="https://discord.com" target="_blank">
+    <a href="https://agoric.com/discord" target="_blank">
       <img src="./assets/images/discord.svg" alt="Discord"> <!-- Replace with your Discord SVG -->
     </a>
   </div>
@@ -72,14 +73,24 @@
   <!-- Right-bottom component -->
   <div class="right-bottom-component">
     <!-- Learn Link -->
-    <a href="https://example.com" target="_blank" class="learn-link"> <!-- Replace with your desired link -->
+    <a href="https://agoric.com/orchestration" target="_blank" class="learn-link"> <!-- Replace with your desired link -->
       <img src="./assets/images/learn-icon.svg" alt="Learn Icon"> <!-- Replace with your Learn icon SVG -->
-      <span>Learn about Agorio</span>
+      <span>Learn about Agoric</span>
     </a>
 
     <!-- Music Toggle -->
     <div class="music-toggle">
-      <img src="./assets/images/voice-icon.svg" alt="Voice Icon" id="musicIcon">
+      <div class="music-controller">
+        <img src="./assets/images/voice-icon.svg" alt="Voice Icon" class="voiceIcon1">
+        <img src="./assets/images/music-icon.svg" alt="Music Icon" id="musicIcon">
+      </div>
+
+      <div class="sound-effect-controller">
+        <img src="./assets/images/voice-icon.svg" alt="Voice Icon" class="voiceIcon2">
+        <img src="./assets/images/sound-effect.svg" alt="sound effect icon" id="soundEffectIcon">
+
+      </div>
+
       <!-- Replace with your voice icon SVG -->
     </div>
 
@@ -88,10 +99,11 @@
   <!-- </div> -->
 
   <!-- Modal Structure -->
-  <div class="modal fade custom-modal" id="cemeteryModal" data-bs-backdrop="static" tabindex="-1"
-    aria-labelledby="cemeteryModalLabel" aria-hidden="true">
+  <div class="modal fade custom-modal" id="cemeteryModal" tabindex="-1"
+    aria-labelledby="cemeteryModalLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
+        <div class="modal-header">Welcome to the Smart Contract Cemetery</div>
         <div class="modal-body">
           <p>These are the forgotten relics of blockchain's past—contracts that worked hard but met untimely ends. From
             staking programs that ran out of time, to liquidity pools that faded away, these contracts lived fast and
@@ -109,10 +121,13 @@
     </div>
   </div>
 
-  <div class="modal fade area-modal" id="areaModal" data-bs-backdrop="static" tabindex="-1"
+  <div class="modal fade area-modal" id="areaModal" tabindex="-1"
     aria-labelledby="areaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
+        <button class="close-btn" data-bs-dismiss="modal">
+          <img class="close-btn-image" src="./assets/images/close-icon.svg">
+        </button>
         <div class="modal-body">
           <div class="header">
             <h3 class="title">
@@ -128,14 +143,21 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="enter-button">See how this death could have been prevented ... </button>
+          <a type="button" class="enter-button" href="" target="_blank">Read the lore ... </a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Audio Element for Music -->
-  <audio id="backgroundMusic" src="./assets/audio/background-image.mp3"></audio>
+  <audio id="backgroundMusic" src="./assets/audio/background-music.mp3"></audio>
+
+  <!-- Audio Element for Sound Effect -->
+  <audio id="soundEffectHover" src="./assets/audio/whoosh-high-kick.mp3"></audio>
+
+  <!-- Audio Element for Sound Effect -->
+  <audio id="soundEffectClick" src="./assets/audio/whoosh-fire-movement.mp3"></audio>
+
   <!-- Replace with your music file URL -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
