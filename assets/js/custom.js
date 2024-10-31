@@ -267,7 +267,7 @@ $(document).ready(function () {
         11
       );
       var lastStr = modalNumClass.charAt(10);
-      $(this).attr("href", modalContentArray[lastStr]["redirect-url"]);
+      $(this).attr("href", modalContentArray[lastStr - 1]["redirect-url"]);
       $("#areaModal").css({
         display: "none",
       });
