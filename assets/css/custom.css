@@ -8,6 +8,27 @@
   z-index: -1;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #47494E;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* 
   .overlay {
     background-color: rgba(0, 0, 0, 0.5); 
@@ -286,17 +307,22 @@
   background-size: 65% 100%;
 }
 
+.area-modal .modal-body {
+  padding: 16px 30px 16px 45px;
+}
+
 /* Custom modal styling */
 .area-modal .modal-content {
-  background-image: url('../images/modal-area1.png');
+  background-image: url('../images/Cemetary_Stone_Modal.webp');
   /* Replace with your modal background image */
-  background-size: cover;
-  font-family: 'Acme', Courier, monospace;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'JejuHallasan', Courier, monospace;
   background-position: center;
   background-color: transparent;
   color: #d3d3d3;
   border-radius: 10px;
-  padding: 45px;
+  padding: 60px;
   max-width: 90vw;
   max-height: 90vh;
   width: 100%;
@@ -317,7 +343,7 @@
 }
 
 .area-modal .modal-footer .enter-button {
-  background-image: url('../images/closeAreaModal.png');
+  background-image: url('../images/Cemetary_Button_Modal.webp');
   /* Replace with your button background image */
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -335,7 +361,6 @@
   letter-spacing: 0.03em;
   font-weight: 400;
   color: rgb(253, 236, 228);
-  font-style: italic;
   padding: 20px;
   text-decoration: none;
   display: flex;
@@ -362,16 +387,17 @@
 }
 
 .area-modal .modal-body .header .title {
-  font-family: 'Acme', Courier, monospace;
-  font-size: 33px;
+  font-family: 'JejuHallasan', Courier, monospace;
+  font-size: 24px;
   font-weight: 400;
   line-height: 43px;
   letter-spacing: 0.03em;
   color: rgba(188, 205, 219);
+  margin-top: 10px;
 }
 
 .area-modal .modal-body .header .description {
-  font-family: 'Acme', Courier, monospace;
+  font-family: 'JejuHallasan', Courier, monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 22.5px;
@@ -382,35 +408,49 @@
 .area-modal .modal-body .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color: rgba(188, 205, 219);
-  margin-bottom: 10px;
+  margin-top: 55px;
+  margin-bottom: 50px;
 }
 
 .area-modal .modal-body .content p {
-  font-family: 'Pulp Display', Courier, monospace;
+  font-family: 'JejuHallasan', Courier, monospace;
   font-weight: 400;
   font-size: 14px;
   line-height: 17.5px;
   letter-spacing: 0.03em;
   font-style: italic;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.area-modal .modal-body .content p span.content-span {
+  display: inline-block;
+  width: 150px;
+}
+
+.area-modal .modal-body .main-content {
+  max-height: 256px;
+  overflow: auto;
+  padding: 0px 16px 0px 0px;
 }
 
 .area-modal .modal-body .main-content p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.03em;
   color: rgba(188, 205, 219);
+  text-align: left;
 }
 
 .area-modal .modal-body .main-content p:first-of-type {
-  font-family: 'Pulp Display', Courier, monospace;
+  font-family: 'JejuHallasan', Courier, monospace;
 }
 
 .area-modal .modal-body .main-content p:last-of-type {
-  font-family: 'Acme', Courier, monospace;
+  font-family: 'JejuHallasan', Courier, monospace;
 }
 
 .area-modal.modal-area3 .modal-dialog,
